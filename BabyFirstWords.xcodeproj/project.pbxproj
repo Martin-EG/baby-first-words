@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02D4AD146F8B029711FAFD4D /* PastelPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B37B574918DFC89D97D86 /* PastelPalette.swift */; };
+		16238B1E8E6559B4BBBDB87B /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBCA314E934E948CD83BC4 /* AudioPlayer.swift */; };
+		2098007095F942560BAD3DBF /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B733D61B1F54A3E3C9E44F /* Word.swift */; };
+		2CD73CE8A72551BA3FA47DBA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B237A2569A9ABE8B3DC0AC4 /* Lesson.swift */; };
+		33874993854F1560B7E0B56B /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4546EB7A18F099E959BB3 /* AppSettings.swift */; };
+		4C45F7C389D122DC7AC45039 /* ParentalGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686305FBBDBB09524C7D3F2 /* ParentalGateView.swift */; };
+		7F1BBF900831C9FC5A33EB8E /* LessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BB7637979839ACE629F12 /* LessonPlayerView.swift */; };
+		8806F5D48F9F2A770FE6FE13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C06609392CE4E60084D8FA /* SettingsView.swift */; };
+		8D8B00CBEEAA2AEAF02FFA75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB88C024267FBB871B966A61 /* Assets.xcassets */; };
+		AAC5889A3286522F36CEC94C /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EE9965804C35163CCF02865 /* lessons.json */; };
+		B48FE90BFC0F6FEA50271F11 /* LessonCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A1C46BDF54B126CD8F70B2 /* LessonCatalog.swift */; };
+		DFBF2D3F2B7D5EE386E61E17 /* BabyFirstWordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102D67D969A052419525343 /* BabyFirstWordsApp.swift */; };
+		ED6D55196399F552B418D486 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B5C590B4F374877D799C0D /* HomeView.swift */; };
+		F7089BA508DA91B3175A8837 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 0650D4306C28BC706E5207AE /* Audio */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0650D4306C28BC706E5207AE /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = BabyFirstWords/Resources/Audio; sourceTree = SOURCE_ROOT; };
+		07A1C46BDF54B126CD8F70B2 /* LessonCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCatalog.swift; sourceTree = "<group>"; };
+		0EE9965804C35163CCF02865 /* lessons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lessons.json; sourceTree = "<group>"; };
+		25BBCA314E934E948CD83BC4 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		3B237A2569A9ABE8B3DC0AC4 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		48B5C590B4F374877D799C0D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		55E4546EB7A18F099E959BB3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		7686305FBBDBB09524C7D3F2 /* ParentalGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentalGateView.swift; sourceTree = "<group>"; };
+		791BB7637979839ACE629F12 /* LessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPlayerView.swift; sourceTree = "<group>"; };
+		96C06609392CE4E60084D8FA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A9B5386614896CBFF5AFACCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AF3F5E5C04BAD7CC808431E4 /* BabyFirstWords.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BabyFirstWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B102D67D969A052419525343 /* BabyFirstWordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyFirstWordsApp.swift; sourceTree = "<group>"; };
+		C0B733D61B1F54A3E3C9E44F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		DB88C024267FBB871B966A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED4B37B574918DFC89D97D86 /* PastelPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastelPalette.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		3BC0E4AE06666D22D43DF210 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B237A2569A9ABE8B3DC0AC4 /* Lesson.swift */,
+				07A1C46BDF54B126CD8F70B2 /* LessonCatalog.swift */,
+				C0B733D61B1F54A3E3C9E44F /* Word.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4C36B46EB29D5C27401619D2 = {
+			isa = PBXGroup;
+			children = (
+				0650D4306C28BC706E5207AE /* Audio */,
+				A520CB0979267F9F7EB7D718 /* BabyFirstWords */,
+				9447A581A7DCBE66078EA08B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87C846171574EC40BB1C2B09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				55E4546EB7A18F099E959BB3 /* AppSettings.swift */,
+				25BBCA314E934E948CD83BC4 /* AudioPlayer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9447A581A7DCBE66078EA08B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF3F5E5C04BAD7CC808431E4 /* BabyFirstWords.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A520CB0979267F9F7EB7D718 /* BabyFirstWords */ = {
+			isa = PBXGroup;
+			children = (
+				DB88C024267FBB871B966A61 /* Assets.xcassets */,
+				B102D67D969A052419525343 /* BabyFirstWordsApp.swift */,
+				A9B5386614896CBFF5AFACCD /* Info.plist */,
+				3BC0E4AE06666D22D43DF210 /* Models */,
+				C1E618AA4B5A976F84E7D65D /* Resources */,
+				87C846171574EC40BB1C2B09 /* Services */,
+				B13737FC62542B2CA125B14E /* Views */,
+			);
+			path = BabyFirstWords;
+			sourceTree = "<group>";
+		};
+		B13737FC62542B2CA125B14E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48B5C590B4F374877D799C0D /* HomeView.swift */,
+				791BB7637979839ACE629F12 /* LessonPlayerView.swift */,
+				7686305FBBDBB09524C7D3F2 /* ParentalGateView.swift */,
+				ED4B37B574918DFC89D97D86 /* PastelPalette.swift */,
+				96C06609392CE4E60084D8FA /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1E618AA4B5A976F84E7D65D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0EE9965804C35163CCF02865 /* lessons.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8543C939C86E8CDA83663ED5 /* BabyFirstWords */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E1F20F0FC7035583DB0A6F /* Build configuration list for PBXNativeTarget "BabyFirstWords" */;
+			buildPhases = (
+				AFFC02712562E0CF91CA9D6C /* Sources */,
+				E186420A16CE479DF1631262 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BabyFirstWords;
+			packageProductDependencies = (
+			);
+			productName = BabyFirstWords;
+			productReference = AF3F5E5C04BAD7CC808431E4 /* BabyFirstWords.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A2CF96A220F86B1A7C2D07B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8543C939C86E8CDA83663ED5 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 87265ECE82FF8F0057402728 /* Build configuration list for PBXProject "BabyFirstWords" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 4C36B46EB29D5C27401619D2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9447A581A7DCBE66078EA08B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8543C939C86E8CDA83663ED5 /* BabyFirstWords */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E186420A16CE479DF1631262 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D8B00CBEEAA2AEAF02FFA75 /* Assets.xcassets in Resources */,
+				F7089BA508DA91B3175A8837 /* Audio in Resources */,
+				AAC5889A3286522F36CEC94C /* lessons.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFFC02712562E0CF91CA9D6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33874993854F1560B7E0B56B /* AppSettings.swift in Sources */,
+				16238B1E8E6559B4BBBDB87B /* AudioPlayer.swift in Sources */,
+				DFBF2D3F2B7D5EE386E61E17 /* BabyFirstWordsApp.swift in Sources */,
+				ED6D55196399F552B418D486 /* HomeView.swift in Sources */,
+				2CD73CE8A72551BA3FA47DBA /* Lesson.swift in Sources */,
+				B48FE90BFC0F6FEA50271F11 /* LessonCatalog.swift in Sources */,
+				7F1BBF900831C9FC5A33EB8E /* LessonPlayerView.swift in Sources */,
+				4C45F7C389D122DC7AC45039 /* ParentalGateView.swift in Sources */,
+				02D4AD146F8B029711FAFD4D /* PastelPalette.swift in Sources */,
+				8806F5D48F9F2A770FE6FE13 /* SettingsView.swift in Sources */,
+				2098007095F942560BAD3DBF /* Word.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3DB0D546E6B7489AA07041DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = BabyFirstWords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinespericueta.BabyFirstWords;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DAD2114A187DCB21E724BB41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E439207AE41B1397F7293DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = BabyFirstWords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinespericueta.BabyFirstWords;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F0A425B4B17AB95744E457E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14E1F20F0FC7035583DB0A6F /* Build configuration list for PBXNativeTarget "BabyFirstWords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E439207AE41B1397F7293DD3 /* Debug */,
+				3DB0D546E6B7489AA07041DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		87265ECE82FF8F0057402728 /* Build configuration list for PBXProject "BabyFirstWords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0A425B4B17AB95744E457E7 /* Debug */,
+				DAD2114A187DCB21E724BB41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A2CF96A220F86B1A7C2D07B /* Project object */;
+}

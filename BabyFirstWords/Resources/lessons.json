@@ -1,0 +1,274 @@
+[
+  {
+    "lesson_id": "people",
+    "en_name": "People & Greetings",
+    "es_name": "Personas y Saludos",
+    "icon": "person.2.fill",
+    "words": [
+      {
+        "word_id": "mama",
+        "en_text": "Mama",
+        "es_text": "Mamá"
+      },
+      {
+        "word_id": "papa",
+        "en_text": "Papa",
+        "es_text": "Papá"
+      },
+      {
+        "word_id": "baby",
+        "en_text": "Baby",
+        "es_text": "Bebé"
+      },
+      {
+        "word_id": "hello",
+        "en_text": "Hello",
+        "es_text": "Hola"
+      },
+      {
+        "word_id": "bye",
+        "en_text": "Bye",
+        "es_text": "Adiós"
+      }
+    ],
+    "color": "pink"
+  },
+  {
+    "lesson_id": "animals",
+    "en_name": "Animals",
+    "es_name": "Animales",
+    "icon": "pawprint.fill",
+    "words": [
+      {
+        "word_id": "dog",
+        "en_text": "Dog",
+        "es_text": "Perro"
+      },
+      {
+        "word_id": "cat",
+        "en_text": "Cat",
+        "es_text": "Gato"
+      },
+      {
+        "word_id": "bird",
+        "en_text": "Bird",
+        "es_text": "Pájaro"
+      },
+      {
+        "word_id": "fish",
+        "en_text": "Fish",
+        "es_text": "Pez"
+      },
+      {
+        "word_id": "cow",
+        "en_text": "Cow",
+        "es_text": "Vaca"
+      }
+    ],
+    "color": "brown"
+  },
+  {
+    "lesson_id": "food_home",
+    "en_name": "Food & Home",
+    "es_name": "Comida y Casa",
+    "icon": "house.fill",
+    "words": [
+      {
+        "word_id": "water",
+        "en_text": "Water",
+        "es_text": "Agua"
+      },
+      {
+        "word_id": "milk",
+        "en_text": "Milk",
+        "es_text": "Leche"
+      },
+      {
+        "word_id": "ball",
+        "en_text": "Ball",
+        "es_text": "Pelota"
+      },
+      {
+        "word_id": "book",
+        "en_text": "Book",
+        "es_text": "Libro"
+      },
+      {
+        "word_id": "more",
+        "en_text": "More",
+        "es_text": "Más"
+      }
+    ],
+    "color": "green"
+  },
+  {
+    "lesson_id": "colors",
+    "en_name": "Colors",
+    "es_name": "Colores",
+    "icon": "paintpalette.fill",
+    "words": [
+      {
+        "word_id": "red",
+        "en_text": "Red",
+        "es_text": "Rojo"
+      },
+      {
+        "word_id": "blue",
+        "en_text": "Blue",
+        "es_text": "Azul"
+      },
+      {
+        "word_id": "yellow",
+        "en_text": "Yellow",
+        "es_text": "Amarillo"
+      },
+      {
+        "word_id": "green",
+        "en_text": "Green",
+        "es_text": "Verde"
+      },
+      {
+        "word_id": "purple",
+        "en_text": "Purple",
+        "es_text": "Morado"
+      }
+    ],
+    "color": "purple"
+  },
+  {
+    "lesson_id": "numbers",
+    "en_name": "Numbers",
+    "es_name": "Números",
+    "icon": "textformat.123",
+    "words": [
+      {
+        "word_id": "one",
+        "en_text": "One",
+        "es_text": "Uno"
+      },
+      {
+        "word_id": "two",
+        "en_text": "Two",
+        "es_text": "Dos"
+      },
+      {
+        "word_id": "three",
+        "en_text": "Three",
+        "es_text": "Tres"
+      },
+      {
+        "word_id": "four",
+        "en_text": "Four",
+        "es_text": "Cuatro"
+      },
+      {
+        "word_id": "five",
+        "en_text": "Five",
+        "es_text": "Cinco"
+      }
+    ],
+    "color": "orange"
+  },
+  {
+    "lesson_id": "body",
+    "en_name": "My Body",
+    "es_name": "Mi Cuerpo",
+    "icon": "hand.raised.fill",
+    "words": [
+      {
+        "word_id": "head",
+        "en_text": "Head",
+        "es_text": "Cabeza"
+      },
+      {
+        "word_id": "hand",
+        "en_text": "Hand",
+        "es_text": "Mano"
+      },
+      {
+        "word_id": "foot",
+        "en_text": "Foot",
+        "es_text": "Pie"
+      },
+      {
+        "word_id": "eye",
+        "en_text": "Eye",
+        "es_text": "Ojo"
+      },
+      {
+        "word_id": "nose",
+        "en_text": "Nose",
+        "es_text": "Nariz"
+      }
+    ],
+    "color": "teal"
+  },
+  {
+    "lesson_id": "clothes",
+    "en_name": "Clothes",
+    "es_name": "Ropa",
+    "icon": "tshirt.fill",
+    "words": [
+      {
+        "word_id": "shoe",
+        "en_text": "Shoe",
+        "es_text": "Zapato"
+      },
+      {
+        "word_id": "shirt",
+        "en_text": "Shirt",
+        "es_text": "Camisa"
+      },
+      {
+        "word_id": "hat",
+        "en_text": "Hat",
+        "es_text": "Sombrero"
+      },
+      {
+        "word_id": "sock",
+        "en_text": "Sock",
+        "es_text": "Calcetín"
+      },
+      {
+        "word_id": "pants",
+        "en_text": "Pants",
+        "es_text": "Pantalón"
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "lesson_id": "actions",
+    "en_name": "Actions",
+    "es_name": "Acciones",
+    "icon": "figure.play",
+    "words": [
+      {
+        "word_id": "eat",
+        "en_text": "Eat",
+        "es_text": "Comer"
+      },
+      {
+        "word_id": "sleep",
+        "en_text": "Sleep",
+        "es_text": "Dormir"
+      },
+      {
+        "word_id": "play",
+        "en_text": "Play",
+        "es_text": "Jugar"
+      },
+      {
+        "word_id": "jump",
+        "en_text": "Jump",
+        "es_text": "Saltar"
+      },
+      {
+        "word_id": "hug",
+        "en_text": "Hug",
+        "es_text": "Abrazo"
+      }
+    ],
+    "color": "yellow"
+  }
+]
