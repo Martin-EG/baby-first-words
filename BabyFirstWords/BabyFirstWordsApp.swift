@@ -12,6 +12,7 @@ struct BabyFirstWordsApp: App {
                 .environment(catalog)
                 .environment(settings)
                 .environment(audioPlayer)
+                .preferredColorScheme(.light)
         }
     }
 }
