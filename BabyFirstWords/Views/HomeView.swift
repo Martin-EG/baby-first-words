@@ -19,6 +19,13 @@ struct HomeView: View {
                             .multilineTextAlignment(.center)
                             .padding(.top, 8)
 
+                        NavigationLink {
+                            FamilyLessonView()
+                        } label: {
+                            FamilyTile()
+                        }
+                        .buttonStyle(.plain)
+
                         ForEach(catalog.lessons) { lesson in
                             NavigationLink {
                                 LessonPlayerView(lesson: lesson)
@@ -55,6 +62,33 @@ struct HomeView: View {
             }
         }
         .fontDesign(.rounded)
+    }
+}
+
+private struct FamilyTile: View {
+    private var tileColor: Color { PastelPalette.color(named: "rose") }
+
+    var body: some View {
+        HStack(spacing: 18) {
+            ZStack {
+                Circle().fill(.white.opacity(0.55)).frame(width: 76, height: 76)
+                Image(systemName: "heart.fill").font(.system(size: 36)).foregroundStyle(.white)
+            }
+            Text("Mi Familia")
+                .font(.system(size: 26, weight: .bold, design: .rounded))
+                .foregroundStyle(.white)
+            Spacer()
+            Image(systemName: "chevron.right.circle.fill")
+                .font(.title)
+                .foregroundStyle(.white.opacity(0.8))
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity)
+        .background(
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
+                .fill(tileColor.gradient)
+        )
+        .shadow(color: tileColor.opacity(0.5), radius: 8, x: 0, y: 6)
     }
 }
 

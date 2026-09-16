@@ -20,12 +20,19 @@ final class AudioPlayer {
             assertionFailure("Missing audio file: Audio/\(folder)/\(fileName)")
             return
         }
+        play(fileAt: url, volume: volume)
+    }
+
+    /// Plays an arbitrary audio file on disk — used for parent-recorded
+    /// family voices, which live outside the app bundle.
+    func play(fileAt url: URL, volume: Double) {
         do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers])
             player = try AVAudioPlayer(contentsOf: url)
             player?.volume = Float(volume)
             player?.play()
         } catch {
-            assertionFailure("Failed to play audio: \(error)")
+            assertionFailure("Failed to play audio at \(url): \(error)")
         }
     }
 }

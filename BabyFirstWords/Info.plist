@@ -25,6 +25,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Take a photo of a family member to add them to your child's "Mi Familia" lesson.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Record your voice saying a family member's name for your child's "Mi Familia" lesson.</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UISupportedInterfaceOrientations</key>

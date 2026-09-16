@@ -11,6 +11,7 @@ enum PastelPalette {
         case "teal": return Color(red: 0.65, green: 0.90, blue: 0.88)
         case "blue": return Color(red: 0.68, green: 0.82, blue: 1.00)
         case "yellow": return Color(red: 1.00, green: 0.90, blue: 0.55)
+        case "rose": return Color(red: 0.95, green: 0.55, blue: 0.60)
         default: return Color(red: 0.85, green: 0.85, blue: 0.95)
         }
     }

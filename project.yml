@@ -30,6 +30,8 @@ targets:
         CFBundleDisplayName: Baby First Words
         NSAppTransportSecurity:
           NSAllowsArbitraryLoads: false
+        NSCameraUsageDescription: Take a photo of a family member to add them to your child's "Mi Familia" lesson.
+        NSMicrophoneUsageDescription: Record your voice saying a family member's name for your child's "Mi Familia" lesson.
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.martinespericueta.BabyFirstWords

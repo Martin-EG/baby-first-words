@@ -8,17 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		02D4AD146F8B029711FAFD4D /* PastelPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4B37B574918DFC89D97D86 /* PastelPalette.swift */; };
+		0C06B9A74007E2A4ACB3E77E /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651F2F221B5AC6CDC80AC7E /* AudioRecorder.swift */; };
 		16238B1E8E6559B4BBBDB87B /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBCA314E934E948CD83BC4 /* AudioPlayer.swift */; };
+		18D840B8188C2B26D3C5C489 /* ManageFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B339FB7C7351146CB64710D0 /* ManageFamilyView.swift */; };
+		1B52ED9FAA1F36BF3DEA86E5 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8744C9E6FC8B732A92412842 /* CameraPicker.swift */; };
 		2098007095F942560BAD3DBF /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B733D61B1F54A3E3C9E44F /* Word.swift */; };
 		2CD73CE8A72551BA3FA47DBA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B237A2569A9ABE8B3DC0AC4 /* Lesson.swift */; };
 		33874993854F1560B7E0B56B /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4546EB7A18F099E959BB3 /* AppSettings.swift */; };
+		459D8B6F11EA80D933CFD15F /* FamilyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D305C6C54D5026CB2FC505 /* FamilyStore.swift */; };
 		4C45F7C389D122DC7AC45039 /* ParentalGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686305FBBDBB09524C7D3F2 /* ParentalGateView.swift */; };
+		6CB0C44F2B8F915EC0DC755E /* FamilyLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C742AC7A2DB982D86E70 /* FamilyLessonView.swift */; };
 		7F1BBF900831C9FC5A33EB8E /* LessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BB7637979839ACE629F12 /* LessonPlayerView.swift */; };
 		8806F5D48F9F2A770FE6FE13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C06609392CE4E60084D8FA /* SettingsView.swift */; };
 		8D8B00CBEEAA2AEAF02FFA75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB88C024267FBB871B966A61 /* Assets.xcassets */; };
 		AAC5889A3286522F36CEC94C /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EE9965804C35163CCF02865 /* lessons.json */; };
 		B48FE90BFC0F6FEA50271F11 /* LessonCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A1C46BDF54B126CD8F70B2 /* LessonCatalog.swift */; };
+		B6FE04EABD7E42D4C7FECABA /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA2C13B8AEB41F62AAB9C7B /* FamilyMember.swift */; };
 		DFBF2D3F2B7D5EE386E61E17 /* BabyFirstWordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102D67D969A052419525343 /* BabyFirstWordsApp.swift */; };
+		E9F84A6EAC3509240C9F25DA /* FamilyMemberEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1ABC0979A6DD1EB58E588C /* FamilyMemberEditorView.swift */; };
 		ED6D55196399F552B418D486 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B5C590B4F374877D799C0D /* HomeView.swift */; };
 		F7089BA508DA91B3175A8837 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 0650D4306C28BC706E5207AE /* Audio */; };
 /* End PBXBuildFile section */
@@ -27,16 +34,23 @@
 		0650D4306C28BC706E5207AE /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = BabyFirstWords/Resources/Audio; sourceTree = SOURCE_ROOT; };
 		07A1C46BDF54B126CD8F70B2 /* LessonCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCatalog.swift; sourceTree = "<group>"; };
 		0EE9965804C35163CCF02865 /* lessons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lessons.json; sourceTree = "<group>"; };
+		1C1ABC0979A6DD1EB58E588C /* FamilyMemberEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberEditorView.swift; sourceTree = "<group>"; };
 		25BBCA314E934E948CD83BC4 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		3B237A2569A9ABE8B3DC0AC4 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		48B5C590B4F374877D799C0D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		55E4546EB7A18F099E959BB3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		7651F2F221B5AC6CDC80AC7E /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		7686305FBBDBB09524C7D3F2 /* ParentalGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentalGateView.swift; sourceTree = "<group>"; };
 		791BB7637979839ACE629F12 /* LessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPlayerView.swift; sourceTree = "<group>"; };
+		8744C9E6FC8B732A92412842 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
 		96C06609392CE4E60084D8FA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9DA2C13B8AEB41F62AAB9C7B /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 		A9B5386614896CBFF5AFACCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		AF3F5E5C04BAD7CC808431E4 /* BabyFirstWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyFirstWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABA4C742AC7A2DB982D86E70 /* FamilyLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyLessonView.swift; sourceTree = "<group>"; };
+		AF3F5E5C04BAD7CC808431E4 /* BabyFirstWords.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BabyFirstWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102D67D969A052419525343 /* BabyFirstWordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyFirstWordsApp.swift; sourceTree = "<group>"; };
+		B2D305C6C54D5026CB2FC505 /* FamilyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStore.swift; sourceTree = "<group>"; };
+		B339FB7C7351146CB64710D0 /* ManageFamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFamilyView.swift; sourceTree = "<group>"; };
 		C0B733D61B1F54A3E3C9E44F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		DB88C024267FBB871B966A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4B37B574918DFC89D97D86 /* PastelPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastelPalette.swift; sourceTree = "<group>"; };
@@ -46,6 +60,7 @@
 		3BC0E4AE06666D22D43DF210 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9DA2C13B8AEB41F62AAB9C7B /* FamilyMember.swift */,
 				3B237A2569A9ABE8B3DC0AC4 /* Lesson.swift */,
 				07A1C46BDF54B126CD8F70B2 /* LessonCatalog.swift */,
 				C0B733D61B1F54A3E3C9E44F /* Word.swift */,
@@ -67,6 +82,8 @@
 			children = (
 				55E4546EB7A18F099E959BB3 /* AppSettings.swift */,
 				25BBCA314E934E948CD83BC4 /* AudioPlayer.swift */,
+				7651F2F221B5AC6CDC80AC7E /* AudioRecorder.swift */,
+				B2D305C6C54D5026CB2FC505 /* FamilyStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -96,8 +113,12 @@
 		B13737FC62542B2CA125B14E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8744C9E6FC8B732A92412842 /* CameraPicker.swift */,
+				ABA4C742AC7A2DB982D86E70 /* FamilyLessonView.swift */,
+				1C1ABC0979A6DD1EB58E588C /* FamilyMemberEditorView.swift */,
 				48B5C590B4F374877D799C0D /* HomeView.swift */,
 				791BB7637979839ACE629F12 /* LessonPlayerView.swift */,
+				B339FB7C7351146CB64710D0 /* ManageFamilyView.swift */,
 				7686305FBBDBB09524C7D3F2 /* ParentalGateView.swift */,
 				ED4B37B574918DFC89D97D86 /* PastelPalette.swift */,
 				96C06609392CE4E60084D8FA /* SettingsView.swift */,
@@ -144,6 +165,7 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					8543C939C86E8CDA83663ED5 = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -187,11 +209,18 @@
 			files = (
 				33874993854F1560B7E0B56B /* AppSettings.swift in Sources */,
 				16238B1E8E6559B4BBBDB87B /* AudioPlayer.swift in Sources */,
+				0C06B9A74007E2A4ACB3E77E /* AudioRecorder.swift in Sources */,
 				DFBF2D3F2B7D5EE386E61E17 /* BabyFirstWordsApp.swift in Sources */,
+				1B52ED9FAA1F36BF3DEA86E5 /* CameraPicker.swift in Sources */,
+				6CB0C44F2B8F915EC0DC755E /* FamilyLessonView.swift in Sources */,
+				B6FE04EABD7E42D4C7FECABA /* FamilyMember.swift in Sources */,
+				E9F84A6EAC3509240C9F25DA /* FamilyMemberEditorView.swift in Sources */,
+				459D8B6F11EA80D933CFD15F /* FamilyStore.swift in Sources */,
 				ED6D55196399F552B418D486 /* HomeView.swift in Sources */,
 				2CD73CE8A72551BA3FA47DBA /* Lesson.swift in Sources */,
 				B48FE90BFC0F6FEA50271F11 /* LessonCatalog.swift in Sources */,
 				7F1BBF900831C9FC5A33EB8E /* LessonPlayerView.swift in Sources */,
+				18D840B8188C2B26D3C5C489 /* ManageFamilyView.swift in Sources */,
 				4C45F7C389D122DC7AC45039 /* ParentalGateView.swift in Sources */,
 				02D4AD146F8B029711FAFD4D /* PastelPalette.swift in Sources */,
 				8806F5D48F9F2A770FE6FE13 /* SettingsView.swift in Sources */,
@@ -207,7 +236,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = HYZ2GHP9BH;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BabyFirstWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -284,7 +312,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = HYZ2GHP9BH;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BabyFirstWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
