@@ -47,7 +47,7 @@
 		9DA2C13B8AEB41F62AAB9C7B /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 		A9B5386614896CBFF5AFACCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ABA4C742AC7A2DB982D86E70 /* FamilyLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyLessonView.swift; sourceTree = "<group>"; };
-		AF3F5E5C04BAD7CC808431E4 /* BabyFirstWords.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BabyFirstWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3F5E5C04BAD7CC808431E4 /* BabyFirstWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyFirstWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102D67D969A052419525343 /* BabyFirstWordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyFirstWordsApp.swift; sourceTree = "<group>"; };
 		B2D305C6C54D5026CB2FC505 /* FamilyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStore.swift; sourceTree = "<group>"; };
 		B339FB7C7351146CB64710D0 /* ManageFamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFamilyView.swift; sourceTree = "<group>"; };
@@ -165,7 +165,6 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					8543C939C86E8CDA83663ED5 = {
-						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -236,6 +235,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = HYZ2GHP9BH;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BabyFirstWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -312,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = HYZ2GHP9BH;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BabyFirstWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

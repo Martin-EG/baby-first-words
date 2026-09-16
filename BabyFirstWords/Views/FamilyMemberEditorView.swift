@@ -13,6 +13,7 @@ struct FamilyMemberEditorView: View {
     @State private var previewPlayer = AudioPlayer()
     @State private var micDenied = false
     @State private var saveError = false
+    @State private var isPreparingToRecord = false
 
     private var canSave: Bool {
         !name.trimmingCharacters(in: .whitespaces).isEmpty
@@ -126,8 +127,9 @@ struct FamilyMemberEditorView: View {
             } label: {
                 Image(systemName: recorder.isRecording ? "stop.circle.fill" : "mic.circle.fill")
                     .font(.system(size: 64))
-                    .foregroundStyle(recorder.isRecording ? .red : .pink)
+                    .foregroundStyle(isPreparingToRecord ? .gray : (recorder.isRecording ? .red : .pink))
             }
+            .disabled(isPreparingToRecord)
 
             if recorder.recordedURL != nil && !recorder.isRecording {
                 Button {
@@ -146,7 +148,9 @@ struct FamilyMemberEditorView: View {
             recorder.stopRecording()
             return
         }
+        isPreparingToRecord = true
         recorder.requestPermission { granted in
+            isPreparingToRecord = false
             if granted {
                 recorder.startRecording()
             } else {
