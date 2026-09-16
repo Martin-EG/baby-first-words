@@ -1,10 +1,16 @@
 import AVFoundation
 
 @Observable
-final class AudioPlayer {
+final class AudioPlayer: NSObject, AVAudioPlayerDelegate {
+    /// Gap after a word finishes before another play request is honored —
+    /// stops a toddler's rapid re-taps from chopping the word into overlapping bits.
+    private static let cooldown: TimeInterval = 1.5
+
+    private(set) var isPlaying = false
     private var player: AVAudioPlayer?
 
-    init() {
+    override init() {
+        super.init()
         try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers])
         try? AVAudioSession.sharedInstance().setActive(true)
     }
@@ -24,15 +30,25 @@ final class AudioPlayer {
     }
 
     /// Plays an arbitrary audio file on disk — used for parent-recorded
-    /// family voices, which live outside the app bundle.
+    /// family voices, which live outside the app bundle. Ignored while a
+    /// word is already playing or still in its post-playback cooldown.
     func play(fileAt url: URL, volume: Double) {
+        guard !isPlaying else { return }
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers])
             player = try AVAudioPlayer(contentsOf: url)
+            player?.delegate = self
             player?.volume = Float(volume)
             player?.play()
+            isPlaying = true
         } catch {
             assertionFailure("Failed to play audio at \(url): \(error)")
+        }
+    }
+
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + Self.cooldown) { [weak self] in
+            self?.isPlaying = false
         }
     }
 }
