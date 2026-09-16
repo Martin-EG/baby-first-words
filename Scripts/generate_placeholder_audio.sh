@@ -12,7 +12,7 @@ OUT_ES=BabyFirstWords/Resources/Audio/es
 mkdir -p "$OUT_EN" "$OUT_ES"
 
 EN_VOICE="Samantha"
-ES_VOICE="Monica"
+ES_VOICE="Paulina"   # es_MX — Mexican Spanish, more natural than the multi-locale novelty voices
 
 generate() {
   local voice="$1" text="$2" out="$3"
