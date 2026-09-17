@@ -2,11 +2,15 @@ import SwiftUI
 import PhotosUI
 
 struct FamilyMemberEditorView: View {
+    /// nil = adding a new member. Non-nil = editing this one in place.
+    var existingMember: FamilyMember?
+
     @Environment(FamilyStore.self) private var store
     @Environment(\.dismiss) private var dismiss
 
     @State private var name = ""
     @State private var photoData: Data?
+    @State private var audioURL: URL?
     @State private var selectedPhotoItem: PhotosPickerItem?
     @State private var showCamera = false
     @State private var recorder = AudioRecorder()
@@ -15,10 +19,12 @@ struct FamilyMemberEditorView: View {
     @State private var saveError = false
     @State private var isPreparingToRecord = false
 
+    private var isEditing: Bool { existingMember != nil }
+
     private var canSave: Bool {
         !name.trimmingCharacters(in: .whitespaces).isEmpty
             && photoData != nil
-            && recorder.recordedURL != nil
+            && audioURL != nil
     }
 
     var body: some View {
@@ -35,7 +41,7 @@ struct FamilyMemberEditorView: View {
                 }
             }
             .fontDesign(.rounded)
-            .navigationTitle("Nuevo familiar")
+            .navigationTitle(isEditing ? "Editar familiar" : "Nuevo familiar")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -60,6 +66,15 @@ struct FamilyMemberEditorView: View {
             }
             .alert("No se pudo guardar", isPresented: $saveError) {
                 Button("OK", role: .cancel) {}
+            }
+            .onChange(of: recorder.recordedURL) { _, newValue in
+                if let newValue { audioURL = newValue }
+            }
+            .task {
+                guard let existingMember else { return }
+                name = existingMember.name
+                photoData = try? Data(contentsOf: store.photoURL(for: existingMember))
+                audioURL = store.audioURL(for: existingMember)
             }
         }
     }
@@ -131,14 +146,22 @@ struct FamilyMemberEditorView: View {
             }
             .disabled(isPreparingToRecord)
 
-            if recorder.recordedURL != nil && !recorder.isRecording {
+            if isEditing && !recorder.isRecording {
+                Text("Ya tiene una grabación — toca el micrófono para reemplazarla")
+                    .font(.system(size: 12))
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+            }
+
+            if let audioURL, !recorder.isRecording {
                 Button {
-                    previewPlayer.play(fileAt: recorder.recordedURL!, volume: 1.0)
+                    previewPlayer.play(fileAt: audioURL, volume: 1.0)
                 } label: {
                     Label("Escuchar", systemImage: "play.fill")
                 }
                 .buttonStyle(.bordered)
                 .tint(.pink)
+                .disabled(previewPlayer.isPlaying)
             }
         }
     }
@@ -160,9 +183,14 @@ struct FamilyMemberEditorView: View {
     }
 
     private func save() {
-        guard let photoData, let audioURL = recorder.recordedURL else { return }
+        guard let photoData, let audioURL else { return }
+        let trimmedName = name.trimmingCharacters(in: .whitespaces)
         do {
-            try store.addMember(name: name.trimmingCharacters(in: .whitespaces), photoData: photoData, recordedAudioURL: audioURL)
+            if let existingMember {
+                try store.updateMember(existingMember, name: trimmedName, photoData: photoData, audioSourceURL: audioURL)
+            } else {
+                try store.addMember(name: trimmedName, photoData: photoData, recordedAudioURL: audioURL)
+            }
             dismiss()
         } catch {
             saveError = true

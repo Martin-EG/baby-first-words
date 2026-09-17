@@ -33,23 +33,32 @@ final class FamilyStore {
         let id = UUID()
         let photoFileName = "\(id).jpg"
         let audioFileName = "\(id).m4a"
-
-        try photoData.write(to: mediaDirectory.appendingPathComponent(photoFileName))
-        let destinationAudioURL = mediaDirectory.appendingPathComponent(audioFileName)
-        if fileManager.fileExists(atPath: destinationAudioURL.path) {
-            try fileManager.removeItem(at: destinationAudioURL)
-        }
-        try fileManager.copyItem(at: recordedAudioURL, to: destinationAudioURL)
+        try writeMedia(photoData: photoData, audioSourceURL: recordedAudioURL, photoFileName: photoFileName, audioFileName: audioFileName)
 
         let member = FamilyMember(id: id, name: name, photoFileName: photoFileName, audioFileName: audioFileName)
         members.append(member)
         save()
     }
 
-    func rename(_ member: FamilyMember, to newName: String) {
+    /// Updates an existing member in place (same id, same file names) so
+    /// edits never orphan old photo/audio files. `audioSourceURL` may be the
+    /// member's own existing recording (kept as-is) or a freshly recorded one.
+    func updateMember(_ member: FamilyMember, name: String, photoData: Data, audioSourceURL: URL) throws {
+        try writeMedia(photoData: photoData, audioSourceURL: audioSourceURL, photoFileName: member.photoFileName, audioFileName: member.audioFileName)
         guard let index = members.firstIndex(where: { $0.id == member.id }) else { return }
-        members[index].name = newName
+        members[index].name = name
         save()
+    }
+
+    private func writeMedia(photoData: Data, audioSourceURL: URL, photoFileName: String, audioFileName: String) throws {
+        try photoData.write(to: mediaDirectory.appendingPathComponent(photoFileName), options: .atomic)
+
+        let destinationAudioURL = mediaDirectory.appendingPathComponent(audioFileName)
+        guard audioSourceURL.standardizedFileURL != destinationAudioURL.standardizedFileURL else { return }
+        if fileManager.fileExists(atPath: destinationAudioURL.path) {
+            try fileManager.removeItem(at: destinationAudioURL)
+        }
+        try fileManager.copyItem(at: audioSourceURL, to: destinationAudioURL)
     }
 
     func deleteMember(_ member: FamilyMember) {

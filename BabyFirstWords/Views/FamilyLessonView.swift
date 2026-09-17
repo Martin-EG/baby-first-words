@@ -95,6 +95,7 @@ struct FamilyLessonView: View {
                     .gesture(
                         DragGesture(minimumDistance: 40)
                             .onEnded { value in
+                                guard !audioPlayer.isPlaying else { return }
                                 if value.translation.width < 0 { goTo(index + 1) }
                                 else if value.translation.width > 0 { goTo(index - 1) }
                             }
@@ -110,9 +111,9 @@ struct FamilyLessonView: View {
                 Spacer()
 
                 HStack(spacing: 36) {
-                    RoundNavButton(systemName: "arrow.left.circle.fill") { goTo(index - 1) }
-                    RoundNavButton(systemName: "speaker.wave.3.fill", big: true) { play(member) }
-                    RoundNavButton(systemName: "arrow.right.circle.fill") { goTo(index + 1) }
+                    RoundNavButton(systemName: "arrow.left.circle.fill", disabled: audioPlayer.isPlaying) { goTo(index - 1) }
+                    RoundNavButton(systemName: "speaker.wave.3.fill", big: true, disabled: audioPlayer.isPlaying) { play(member) }
+                    RoundNavButton(systemName: "arrow.right.circle.fill", disabled: audioPlayer.isPlaying) { goTo(index + 1) }
                 }
                 .padding(.bottom, 32)
             }
@@ -121,6 +122,7 @@ struct FamilyLessonView: View {
     }
 
     private func goTo(_ newIndex: Int) {
+        guard !audioPlayer.isPlaying else { return }
         let count = store.members.count
         guard count > 0 else { return }
         index = ((newIndex % count) + count) % count
@@ -135,6 +137,7 @@ struct FamilyLessonView: View {
 private struct RoundNavButton: View {
     let systemName: String
     var big: Bool = false
+    var disabled: Bool = false
     let action: () -> Void
 
     var body: some View {
@@ -146,5 +149,7 @@ private struct RoundNavButton: View {
                 .background(Circle().fill(Color.pink.gradient))
                 .shadow(color: .pink.opacity(0.6), radius: 8, x: 0, y: 5)
         }
+        .disabled(disabled)
+        .opacity(disabled ? 0.45 : 1.0)
     }
 }

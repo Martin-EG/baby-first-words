@@ -4,6 +4,7 @@ struct ManageFamilyView: View {
     @Environment(FamilyStore.self) private var store
     @Environment(\.dismiss) private var dismiss
     @State private var showEditor = false
+    @State private var editingMember: FamilyMember?
 
     var body: some View {
         NavigationStack {
@@ -11,15 +12,29 @@ struct ManageFamilyView: View {
                 PastelPalette.backgroundGradient.ignoresSafeArea()
                 List {
                     ForEach(store.members) { member in
-                        HStack(spacing: 14) {
-                            AsyncFilePhoto(url: store.photoURL(for: member))
-                                .frame(width: 44, height: 44)
-                                .clipShape(Circle())
-                            Text(member.name).font(.system(size: 17, weight: .semibold, design: .rounded))
+                        Button {
+                            editingMember = member
+                        } label: {
+                            HStack(spacing: 14) {
+                                AsyncFilePhoto(url: store.photoURL(for: member))
+                                    .frame(width: 44, height: 44)
+                                    .clipShape(Circle())
+                                Text(member.name).font(.system(size: 17, weight: .semibold, design: .rounded))
+                                Spacer()
+                                Image(systemName: "pencil")
+                                    .font(.system(size: 14))
+                                    .foregroundStyle(.secondary)
+                            }
+                            .contentShape(Rectangle())
                         }
-                    }
-                    .onDelete { offsets in
-                        for index in offsets { store.deleteMember(store.members[index]) }
+                        .buttonStyle(.plain)
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                store.deleteMember(member)
+                            } label: {
+                                Label("Eliminar", systemImage: "trash")
+                            }
+                        }
                     }
                 }
                 .scrollContentBackground(.hidden)
@@ -42,6 +57,9 @@ struct ManageFamilyView: View {
             }
             .sheet(isPresented: $showEditor) {
                 FamilyMemberEditorView()
+            }
+            .sheet(item: $editingMember) { member in
+                FamilyMemberEditorView(existingMember: member)
             }
             .overlay {
                 if store.members.isEmpty {

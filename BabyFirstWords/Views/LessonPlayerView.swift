@@ -43,6 +43,7 @@ struct LessonPlayerView: View {
                     .gesture(
                         DragGesture(minimumDistance: 40)
                             .onEnded { value in
+                                guard !audioPlayer.isPlaying else { return }
                                 if value.translation.width < 0 {
                                     goTo(index + 1)
                                 } else if value.translation.width > 0 {
@@ -60,13 +61,13 @@ struct LessonPlayerView: View {
                 Spacer()
 
                 HStack(spacing: 36) {
-                    RoundButton(systemName: "arrow.left.circle.fill", color: tileColor) {
+                    RoundButton(systemName: "arrow.left.circle.fill", color: tileColor, disabled: audioPlayer.isPlaying) {
                         goTo(index - 1)
                     }
-                    RoundButton(systemName: "speaker.wave.3.fill", color: .pink, big: true) {
+                    RoundButton(systemName: "speaker.wave.3.fill", color: .pink, big: true, disabled: audioPlayer.isPlaying) {
                         playCurrentWord()
                     }
-                    RoundButton(systemName: "arrow.right.circle.fill", color: tileColor) {
+                    RoundButton(systemName: "arrow.right.circle.fill", color: tileColor, disabled: audioPlayer.isPlaying) {
                         goTo(index + 1)
                     }
                 }
@@ -87,6 +88,7 @@ struct LessonPlayerView: View {
     }
 
     private func goTo(_ newIndex: Int) {
+        guard !audioPlayer.isPlaying else { return }
         let count = lesson.words.count
         index = ((newIndex % count) + count) % count
         playCurrentWord()
@@ -101,6 +103,7 @@ private struct RoundButton: View {
     let systemName: String
     let color: Color
     var big: Bool = false
+    var disabled: Bool = false
     let action: () -> Void
 
     var body: some View {
@@ -112,5 +115,7 @@ private struct RoundButton: View {
                 .background(Circle().fill(color.gradient))
                 .shadow(color: color.opacity(0.6), radius: 8, x: 0, y: 5)
         }
+        .disabled(disabled)
+        .opacity(disabled ? 0.45 : 1.0)
     }
 }
