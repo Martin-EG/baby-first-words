@@ -7,6 +7,7 @@ struct FamilyLessonView: View {
     @State private var index = 0
     @State private var showGate = false
     @State private var showManage = false
+    @State private var isLocked = false
 
     private var member: FamilyMember? {
         store.members.indices.contains(index) ? store.members[index] : nil
@@ -16,23 +17,37 @@ struct FamilyLessonView: View {
         ZStack {
             PastelPalette.backgroundGradient.ignoresSafeArea()
 
-            if store.members.isEmpty {
-                emptyState
-            } else {
-                browsingContent
+            Group {
+                if store.members.isEmpty {
+                    emptyState
+                } else {
+                    browsingContent
+                }
+            }
+            .allowsHitTesting(!isLocked)
+
+            if isLocked {
+                LockScrim()
             }
         }
         .fontDesign(.rounded)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(isLocked)
         .toolbarBackground(.hidden, for: .navigationBar)
         .navigationTitle("Mi Familia")
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button { showGate = true } label: {
-                    Image(systemName: "pencil.circle.fill").font(.title2).foregroundStyle(.pink)
+            if !isLocked {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button { showGate = true } label: {
+                        Image(systemName: "pencil.circle.fill").font(.title2).foregroundStyle(.pink)
+                    }
                 }
             }
+            ToolbarItem(placement: .topBarTrailing) {
+                LockToggleButton(isLocked: $isLocked)
+            }
         }
+        .background(DisableSwipeBack(isDisabled: isLocked))
         .sheet(isPresented: $showGate) {
             ParentalGateView {
                 showGate = false

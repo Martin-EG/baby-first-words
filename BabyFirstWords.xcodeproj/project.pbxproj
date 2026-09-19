@@ -18,6 +18,7 @@
 		459D8B6F11EA80D933CFD15F /* FamilyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D305C6C54D5026CB2FC505 /* FamilyStore.swift */; };
 		4C45F7C389D122DC7AC45039 /* ParentalGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686305FBBDBB09524C7D3F2 /* ParentalGateView.swift */; };
 		6CB0C44F2B8F915EC0DC755E /* FamilyLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4C742AC7A2DB982D86E70 /* FamilyLessonView.swift */; };
+		6D0D9036B0A59445AA02BFC9 /* ScreenLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947BAC6489C6EECD2C3E440 /* ScreenLock.swift */; };
 		7F1BBF900831C9FC5A33EB8E /* LessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BB7637979839ACE629F12 /* LessonPlayerView.swift */; };
 		8806F5D48F9F2A770FE6FE13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C06609392CE4E60084D8FA /* SettingsView.swift */; };
 		8D8B00CBEEAA2AEAF02FFA75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB88C024267FBB871B966A61 /* Assets.xcassets */; };
@@ -44,10 +45,11 @@
 		791BB7637979839ACE629F12 /* LessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPlayerView.swift; sourceTree = "<group>"; };
 		8744C9E6FC8B732A92412842 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
 		96C06609392CE4E60084D8FA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9947BAC6489C6EECD2C3E440 /* ScreenLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLock.swift; sourceTree = "<group>"; };
 		9DA2C13B8AEB41F62AAB9C7B /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 		A9B5386614896CBFF5AFACCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ABA4C742AC7A2DB982D86E70 /* FamilyLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyLessonView.swift; sourceTree = "<group>"; };
-		AF3F5E5C04BAD7CC808431E4 /* BabyFirstWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyFirstWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3F5E5C04BAD7CC808431E4 /* BabyFirstWords.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BabyFirstWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102D67D969A052419525343 /* BabyFirstWordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyFirstWordsApp.swift; sourceTree = "<group>"; };
 		B2D305C6C54D5026CB2FC505 /* FamilyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStore.swift; sourceTree = "<group>"; };
 		B339FB7C7351146CB64710D0 /* ManageFamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFamilyView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				B339FB7C7351146CB64710D0 /* ManageFamilyView.swift */,
 				7686305FBBDBB09524C7D3F2 /* ParentalGateView.swift */,
 				ED4B37B574918DFC89D97D86 /* PastelPalette.swift */,
+				9947BAC6489C6EECD2C3E440 /* ScreenLock.swift */,
 				96C06609392CE4E60084D8FA /* SettingsView.swift */,
 			);
 			path = Views;
@@ -165,6 +168,7 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					8543C939C86E8CDA83663ED5 = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -222,6 +226,7 @@
 				18D840B8188C2B26D3C5C489 /* ManageFamilyView.swift in Sources */,
 				4C45F7C389D122DC7AC45039 /* ParentalGateView.swift in Sources */,
 				02D4AD146F8B029711FAFD4D /* PastelPalette.swift in Sources */,
+				6D0D9036B0A59445AA02BFC9 /* ScreenLock.swift in Sources */,
 				8806F5D48F9F2A770FE6FE13 /* SettingsView.swift in Sources */,
 				2098007095F942560BAD3DBF /* Word.swift in Sources */,
 			);
@@ -235,7 +240,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = HYZ2GHP9BH;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BabyFirstWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -312,7 +316,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = HYZ2GHP9BH;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BabyFirstWords/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

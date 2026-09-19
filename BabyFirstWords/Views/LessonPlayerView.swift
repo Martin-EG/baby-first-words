@@ -6,6 +6,7 @@ struct LessonPlayerView: View {
     @Environment(AppSettings.self) private var settings
     @Environment(AudioPlayer.self) private var audioPlayer
     @State private var index = 0
+    @State private var isLocked = false
 
     private var word: Word { lesson.words[index] }
     private var tileColor: Color { PastelPalette.color(named: lesson.color) }
@@ -73,11 +74,23 @@ struct LessonPlayerView: View {
                 }
                 .padding(.bottom, 32)
             }
+            .allowsHitTesting(!isLocked)
+
+            if isLocked {
+                LockScrim()
+            }
         }
         .fontDesign(.rounded)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(isLocked)
         .toolbarBackground(.hidden, for: .navigationBar)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                LockToggleButton(isLocked: $isLocked)
+            }
+        }
         .navigationTitle(lesson.name(for: settings.language))
+        .background(DisableSwipeBack(isDisabled: isLocked))
         .onAppear {
             settings.markLessonOpened(lesson.id)
             playCurrentWord()
